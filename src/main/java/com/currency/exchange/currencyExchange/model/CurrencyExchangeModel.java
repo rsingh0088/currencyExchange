@@ -1,27 +1,29 @@
-package com.currency.exchange.currencyExchange.Entity;
+/**
+ * 
+ */
+package com.currency.exchange.currencyExchange.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-
-@Entity
-@Table(name="CURR_EXCHANGE")
-public class CurrExchange {
-	
-	@Id
+/**
+ * @author Jai Prakash Email: prakashjai01@gmail.com
+ *
+ */
+public class CurrencyExchangeModel {
 	Integer id;
-	
+
 	String fromCurr;
-	
+
 	String toCurr;
-	
+
 	Double value;
-	
-	@JsonIgnore
+
 	String convertionDate;
+	
+	/**
+	 * 
+	 */
+	public CurrencyExchangeModel() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public Integer getId() {
 		return id;
@@ -63,13 +65,5 @@ public class CurrExchange {
 		this.convertionDate = convertionDate;
 	}
 	
-	/**
-	 * 
-	 */
-	public CurrExchange() {
-		// TODO Auto-generated constructor stub
-	}
 	
-	
-
 }
